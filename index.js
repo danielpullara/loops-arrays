@@ -86,13 +86,53 @@ function checkTimesHundred(x) {
   let hundredDigit = numbers.map(checkTimesHundred);
   console.log(hundredDigit);
 
-  let newArray = []
+  let newArray = [];
 
 for(let i =1; i<5 ;i ++){
   newArray.push(Math.pow(2,i))
 }
 console.log(newArray)
 
+let abcOrganize = [];
+abcOrganize = inventors.sort();
+console.log("Result of abcOrganize", abcOrganize )
+
+let zOrganize =[];
+zOrganize = inventors.sort((a,b) => a<b ? 1:-1);
+console.log("Result of zOrganize:", zOrganize);
 
 
+let longName = [];
+longName = inventors.sort((a,b) => a.length < b.length ? 1:-1)
+console.log("result of longName", longName);
+
+let allSum = []
+allSum = numbers.reduce((total, num) => total +=
+num);
+console.log ("Result of allSum:", allSum);
+
+let evenSum = [];
+evenSum = numbers.filter((num) => num % 2 == 0)
+.reduce((total, num) => total += num);
+console.log("Result of evenSum", evenSum)
+
+firstNameTogether = inventors.map((name) => name.substring(0,name.indexOf(' '))).reduce((total, num) => {
+    total += num;
+    return total;
+  });
+
+  firstNameTogether = inventors.map((name) => name.substring(0,name.indexOf(' '))).reduce((total, num) => {
+    total += num;
+    return total;
+  });
+  
+  console.log("Result of firstNameTogether:", firstNameTogether);
+
+
+  let searchY = [];
+searchY = inventors.some((name)=> name.includes('y'));
+console.log("Result of searchY",searchY)
+
+
+  
 
